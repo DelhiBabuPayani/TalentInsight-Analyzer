@@ -1,0 +1,88 @@
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #e0e0e0;
+  font-weight: 600;
+}
+
+.filter-btn.active {
+  background: #4caf50;
+  color: #fff;
+}
+
+.job-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #f9f9f9;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-header h3 {
+  margin: 0;
+}
+
+.job-match {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.job-company {
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+.job-category {
+  font-size: 13px;
+  color: #555;
+}
+
+.job-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.view-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2196f3;
+  color: #fff;
+  cursor: pointer;
+}
+
+.apply-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #1976d2;
+}
+
+.apply-btn:hover {
+  background: #388e3c;
+}

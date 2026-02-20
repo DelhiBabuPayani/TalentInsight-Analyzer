@@ -1,0 +1,142 @@
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* LEFT SIDE */
+.auth-left {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+.login-bg {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("../assets/3d-illustration-computer-monitor-login-screen.jpg") no-repeat center/cover;
+}
+
+.register-bg {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("../assets/register-now-application-information-concept.jpg") no-repeat center/cover;
+}
+
+.auth-left h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.auth-left p {
+  font-size: 18px;
+}
+
+/* RIGHT SIDE */
+.auth-right {
+  width: 50%;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.back-btn {
+  align-self: flex-start;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.auth-right h2 {
+  margin-bottom: 20px;
+}
+
+.auth-right input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.forgot-row {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgot-row span {
+  color: #6d6af8;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* CAPTCHA */
+.captcha-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.captcha-box span {
+  margin-left: 10px;
+}
+
+/* BUTTON */
+.primary-btn {
+  background: #6d6af8;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #5a56e8;
+}
+
+/* TEXT */
+.switch-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #6d6af8;
+  cursor: pointer;
+}
+
+.error-text {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.info-text {
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .auth-left {
+    display: none;
+  }
+
+  .auth-right {
+    width: 100%;
+  }
+}

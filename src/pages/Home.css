@@ -1,0 +1,207 @@
+/* ================= THEME ================= */
+body.dark {
+  --bg: #0b0d1a;
+  --text: #ffffff;
+  --muted: #c7c9ff;
+  --card: #12142a;
+}
+
+body.light {
+  --bg: #f5f6fa;
+  --text: #111111;
+  --muted: #444;
+  --card: #ffffff;
+}
+
+/* ================= BASE ================= */
+.home-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.hero-bg {
+  position: relative;
+  height: 360px;
+  background: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(79,70,229,0.9), rgba(0,0,0,0.8));
+  backdrop-filter: blur(5px);
+}
+
+/* ================= NAV ================= */
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links span {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 70px 80px;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+  color: #e0e0ff;
+}
+/* ================= BUTTON ================= */
+.get-started-btn {
+  padding: 14px 48px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ffffff, #e0e7ff);
+  color: #4f46e5;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.get-started-btn:hover {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;               /* 🔥 FIX: text always visible */
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(79,70,229,0.4);
+}
+
+.get-started-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* ================= BUTTON SPINNER ================= */
+.btn-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ================= LOADING BAR ================= */
+.loading-bar {
+  margin-top: 18px;
+  width: 260px;
+  height: 7px;                 /* 🔥 thicker = visible */
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #4f46e5 0%,
+    #a5b4fc 50%,
+    #4f46e5 100%
+  );
+  background-size: 200% 100%;
+  animation: loadingMove 1.2s linear infinite;
+  box-shadow: 0 0 10px rgba(79,70,229,0.6);
+}
+
+@keyframes loadingMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+
+/* ================= CONTENT ================= */
+.content-section {
+  padding: 70px 80px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ================= FEATURES ================= */
+.features-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.feature-box {
+  max-width: 300px;
+}
+
+.feature-box h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ================= WHY ================= */
+.why-section h2 {
+  margin-bottom: 10px;
+}
+
+.why-text {
+  max-width: 700px;
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+}
+
+/* ================= SCROLL REVEAL ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}

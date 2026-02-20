@@ -1,0 +1,130 @@
+.settings-page {
+  min-height: 100vh;
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+.settings-page.light {
+  background: linear-gradient(120deg, #eef2ff, #f8fafc);
+  color: #020617;
+}
+
+.settings-page.dark {
+  background: linear-gradient(120deg, #020617, #0f172a);
+  color: white;
+}
+
+/* TOP BAR */
+.settings-topbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.icon-back {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #6d6af8;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* CARD */
+.settings-card {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.settings-page.dark .settings-card {
+  background: rgba(15,23,42,0.9);
+}
+
+/* ROW */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.settings-page.dark .setting-row {
+  border-color: rgba(255,255,255,0.08);
+}
+
+.setting-row h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.setting-row p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.settings-page.dark .setting-row p {
+  color: #cbd5f5;
+}
+
+/* BUTTON */
+.toggle-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #6d6af8;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #cbd5e1;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #6d6af8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}

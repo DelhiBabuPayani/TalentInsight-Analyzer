@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+input, button {
+  padding: 10px;
+  margin: 5px 0;
+}
+
+button {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5548d9;
+}
+body.dark {
+  background: #0f1222;
+  color: #ffffff;
+}
+
+body.light {
+  background: #f5f6fa;
+  color: #111111;
+}

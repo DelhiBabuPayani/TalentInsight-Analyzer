@@ -1,0 +1,160 @@
+.skillgap-page {
+  min-height: 100vh;
+  padding: 40px 60px;
+  background: linear-gradient(120deg, #dbeafe, #fefce8);
+  transition: 0.4s ease;
+}
+
+.skillgap-page.dark {
+  background: linear-gradient(120deg, #020617, #0f172a);
+  color: white;
+}
+
+/* ===== HEADER ===== */
+.skillgap-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.back-btn {
+  width: fit-content;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid #6366f1;
+  background: transparent;
+  color: #6366f1;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #6366f1;
+  color: white;
+}
+
+.header-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.header-text p {
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.skillgap-page.dark .header-text p {
+  color: #cbd5f5;
+}
+
+/* ===== GRID ===== */
+.skillgap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* ===== CARD ===== */
+.skill-card {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  padding: 22px;
+  color: white;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transition: 0.35s ease;
+  animation: fadeUp 0.6s ease both;
+}
+
+.skillgap-page:not(.dark) .skill-card {
+  background: white;
+  color: #0f172a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.4);
+}
+
+/* ===== CARD HEADER ===== */
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.alert-icon {
+  color: orange;
+  font-size: 18px;
+}
+
+.skill-card-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: orange;
+}
+
+/* ===== CARD BODY ===== */
+.skill-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.value {
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.skillgap-page:not(.dark) .value {
+  color: #334155;
+}
+
+.link {
+  font-size: 14px;
+  color: #60a5fa;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #93c5fd;
+}
+
+/* ===== NO SKILL CARD ===== */
+.no-skill-card {
+  grid-column: 1 / -1;
+  padding: 30px;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #166534;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
